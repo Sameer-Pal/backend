@@ -134,7 +134,7 @@ In this project, several optimizations have been implemented to improve performa
 ## GitHub Account Clarification
 The commits for this project are made from the Sameer2319 and Sameer Pal account. However, both Sameer2319 and Sameerpal2319 belong to the Same Person:
 
-Sameer-Pal – This is the account where my code repository is hosted.
-Sameer2319 - Vs Code is configured with this account.
+###Sameer-Pal – This is the account where my code repository is hosted.
+###Sameer2319 - Vs Code is configured with this account.
 
 However, both accounts belong to me, and I can verify ownership if needed
