@@ -5,7 +5,7 @@ This project is a **Django-based FAQ application** with support for multilingual
 
 ## Table of Contents
 - [Installation](#Installation)
-- [demoVideo](#https://youtu.be/sssU93mXWMU)
+- [demoVideo](https://youtu.be/sssU93mXWMU)
 - [Optimization](#Optimization)
 - [Tests](#UnitTests)
 
