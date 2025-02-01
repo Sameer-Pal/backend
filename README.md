@@ -138,3 +138,4 @@ The commits for this project are made from the **Sameer2319** and **Sameer Pal**
 - **Sameer2319** – VS Code is configured with this account, so many commits are pushed from here.  
 
 ## Both accounts belong to me, and I can verify ownership if needed.
+![image](https://github.com/user-attachments/assets/643860cf-8a74-436d-860a-d4726339e25f)
