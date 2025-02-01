@@ -3,13 +3,11 @@
 ## Overview
 This project is a **Django-based FAQ application** with support for multilingual content, WYSIWYG editor integration, caching for translations, and an efficient REST API. The application allows users to create and manage FAQs in multiple languages and store translations with the help of Google Translate API. The solution also integrates **django-ckeditor** for a rich text editing experience and uses **Redis** to cache translations for improved performance.
 
-# FAQ Management System
-
-This README.md format includes:
-- **Installation** with step-by-step instructions
-- **API Usage** for accessing the FAQs
-- **Running Tests** with `pytest`
-- **Optimization** techniques used in the project
+## Table of Contents
+- [Installation](#Installation)
+- [Demo-Video](#https://youtu.be/sssU93mXWMU)
+- [Optimization](#Optimization)
+- [Tests](#UnitTests)
 
 
 ## Features
@@ -22,13 +20,6 @@ This README.md format includes:
 
 
 
-
-## Table of Contents
-- [Installation](#Installation)
-- [Demo-Video](#https://youtu.be/sssU93mXWMU)
-- [Optimization](#Optimization)
-- [Tests](#UnitTests)
-## Installation
 
 ### Prerequisites
 - Python 3.12+
@@ -58,22 +49,35 @@ This README.md format includes:
     venv\Scripts\activate  # Windows
     ```
 
-3. **Install dependencies:**
+2. **Installing Django in virtual enviromtne**
+    ```bash
+    pip install django
+    ```
+3. **Starting Project**
+    ```bash
+    django-admin startproject <name_of_project>
+    ```
+   
+4. **Creating App inside Project**
+    ```bash
+    python manage.py startapp <app_name>
+    ```
+5. **Install dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
 
-4. **Apply migrations:**
+6. **Apply migrations:**
     ```bash
     python manage.py migrate
     ```
 
-5. **Create a superuser:**
+7. **Creating  superuser:**
     ```bash
     python manage.py createsuperuser
     ```
 
-6. **Run the development server:**
+9. **Run the development server:**
     ```bash
     python manage.py runserver
     ```
