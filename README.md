@@ -139,3 +139,5 @@ The commits for this project are made from the **Sameer2319** and **Sameer Pal**
 
 ## Both accounts belong to me, and I can verify ownership if needed.
 ![image](https://github.com/user-attachments/assets/643860cf-8a74-436d-860a-d4726339e25f)
+
+Mail: sameerpal365@gmail.com 
