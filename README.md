@@ -5,7 +5,7 @@ This project is a **Django-based FAQ application** with support for multilingual
 
 ## Table of Contents
 - [Installation](#Installation)
-- [Demo-Video](#https://youtu.be/sssU93mXWMU)
+- [demoVideo](#https://youtu.be/sssU93mXWMU)
 - [Optimization](#Optimization)
 - [Tests](#UnitTests)
 
@@ -111,7 +111,7 @@ curl http://localhost:8000/api/faqs/?lang=tm
 ## UnitTests
 ### For Running Test Cases 
 ``` 
-pytest <file_name>.py
+pytest tests.py
 
 ```
 
