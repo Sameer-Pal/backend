@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add FAQ</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+</head>
+<body class="body-container">
+    <h2 class="page-title">Add a New FAQ</h2>
+    <form method="POST" class="faq-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</body>
+</html>
