@@ -6,8 +6,10 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import FAQ
 from .serializers import FAQSerializer
+from rest_framework import generics
 
-class FAQListAPIView(APIView):   # seeing all the saved FAQ's in datbase 
+
+class FAQListAPIView(APIView):  
 
     def get(self, request, lang='en'):
         faqs = FAQ.objects.all()
@@ -21,7 +23,6 @@ class FAQListAPIView(APIView):   # seeing all the saved FAQ's in datbase
             })
 
         return Response(data)
-    
 
 
 def add_faq(request):
@@ -58,8 +59,6 @@ def add_faq(request):
         form = FAQForm()
 
     return render(request, 'faq/add_faq.html', {'form': form})
-
-from rest_framework import generics
 
 
 class FAQRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
