@@ -130,11 +130,11 @@ In this project, several optimizations have been implemented to improve performa
 **Sameer2319** and **Sameer Pal** are same accounts, 
 **Sameerpal2319** is **github student developer pack enabled account** and **sameer pal** is my **personal account**,
 
-
 ## GitHub Account Clarification
-The commits for this project are made from the Sameer2319 and Sameer Pal account. However, both Sameer2319 and Sameerpal2319 belong to the Same Person:
 
-###Sameer-Pal – This is the account where my code repository is hosted.
-###Sameer2319 - Vs Code is configured with this account.
+The commits for this project are made from the **Sameer2319** and **Sameer Pal** accounts. However, both **Sameer2319** and **Sameerpal2319** belong to the same person.
 
-However, both accounts belong to me, and I can verify ownership if needed
+- **Sameerpal2319** – This is the account where my code repository is hosted.  
+- **Sameer2319** – VS Code is configured with this account, so many commits are pushed from here.  
+
+## Both accounts belong to me, and I can verify ownership if needed.
