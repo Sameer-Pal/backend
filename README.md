@@ -1,65 +1,39 @@
-# FAQ Application - Multilingual Support with Django
+# FAQ Application - Multilingual Support using Django
 
 ## Overview
 This project is a **Django-based FAQ application** with support for multilingual content, WYSIWYG editor integration, caching for translations, and an efficient REST API. The application allows users to create and manage FAQs in multiple languages and store translations with the help of Google Translate API. The solution also integrates **django-ckeditor** for a rich text editing experience and uses **Redis** to cache translations for improved performance.
 
-## Requirements
+# FAQ Management System
 
-### 1. Model Design
-- Create a model to store FAQs.
-- Each FAQ should have:
-  - A question (TextField)
-  - An answer (RichTextField for WYSIWYG editor support)
-  - Language-specific translations (`question_hi`, `question_bn`, etc.).
-- Implement a model method to retrieve translated text dynamically.
+This README.md format includes:
+- **Installation** with step-by-step instructions
+- **API Usage** for accessing the FAQs
+- **Running Tests** with `pytest`
+- **Optimization** techniques used in the project
 
-### 2. WYSIWYG Editor Integration
-- Use `django-ckeditor` to allow users to format answers properly.
-- Ensure the WYSIWYG editor supports multilingual content.
 
-### 3. API Development
-- Create a **REST API** for managing FAQs.
-- Support language selection via the `?lang=` query parameter.
-- Ensure responses are fast and efficient using pre-translation caching.
+## Features
+- **WYSIWYG Editor Support** using django-ckeditor for Formatting Answer
+- **Multi-Language Translation** (Supports English, Hindi, Bengali,Tamil etc.)
+- **REST API** for FAQs with language selection via query parameter
+- **Admin Panel** for easy FAQ management for FAQ's
+- **Caching** with Redis for optimized performance
+- **Unit Tests** to ensure functionality and their efficiency
 
-### 4. Caching Mechanism
-- Implement a **cache framework** to store translations.
-- Use **Redis** for improved performance.
 
-### 5. Multi-language Translation Support
-- Use Google Translate API or `googletrans` for translations.
-- Automate translations during object creation.
-- Provide a fallback to English if translation is unavailable.
 
-### 6. Admin Panel
-- Register the FAQ model in the Admin site or create a custom admin interface.
-- Enable a user-friendly admin interface for managing FAQs.
 
-### 7. Unit Tests & Code Quality
-- Write unit tests using `pytest`.
-- Ensure tests cover model methods and API responses.
-- Follow PEP8 guidelines for Python and use `flake8` for linting.
+## Table of Contents
+- [Installation](#Installation)
+- [Demo-Video](#https://youtu.be/sssU93mXWMU)
+- [Optimization](#Optimization)
+- [Tests](#UnitTests)
+## Installation
 
-### 8. Documentation
-- Write a detailed README with:
-  - Installation steps.
-  - API usage examples.
-  - Contribution guidelines.
-- Ensure the README is well-structured and easy to follow.
-
-### 9. Git & Version Control
-- Use Git for version control.
-- Follow conventional commit messages:
-  - `feat: Add multilingual FAQ model`
-  - `fix: Improve translation caching`
-  - `docs: Update README with API examples`
-- Ensure atomic commits with clear commit messages.
-
-### 10. Deployment & Docker Support (Bonus)
-- Provide a `Dockerfile` and `docker-compose.yml`.
-- Deploy the application to Heroku or AWS (optional).
-
----
+### Prerequisites
+- Python 3.12+
+- Django 5+
+- Redis (for caching)
 
 ## Installation
 
@@ -70,8 +44,80 @@ This project is a **Django-based FAQ application** with support for multilingual
 4. Google Translate API or `googletrans`
 5. Django CKEditor
 
-### Step 1: Clone the Repository
-Clone the project from GitHub:
+### Steps
+1. **Clone the repository:**
+    ```bash
+    git clone <your-repo-url>
+    cd <your-project-folder>
+    ```
+
+2. **Create and activate a virtual environment:**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # Linux/macOS
+    venv\Scripts\activate  # Windows
+    ```
+
+3. **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Apply migrations:**
+    ```bash
+    python manage.py migrate
+    ```
+
+5. **Create a superuser:**
+    ```bash
+    python manage.py createsuperuser
+    ```
+
+6. **Run the development server:**
+    ```bash
+    python manage.py runserver
+    ```
+
+## API Usage
+
+### Fetch FAQs in English (Default)
 ```bash
-git clone https://github.com/yourusername/faq-application.git
-cd faq-application
+curl http://localhost:8000/api/faqs/
+
+``` 
+### Fetch FAQs in Hindi
+``` 
+
+curl http://localhost:8000/api/faqs/?lang=hi
+``` 
+
+### Fetch FAQs in Bengali
+``` 
+
+curl http://localhost:8000/api/faqs/?lang=bn
+```
+
+
+### Fetch FAQs in Tamil
+``` 
+
+curl http://localhost:8000/api/faqs/?lang=tm
+```
+
+## UnitTests
+### For Running Test Cases 
+``` 
+pytest <file_name>.py
+
+```
+
+## Optimization
+
+In this project, several optimizations have been implemented to improve performance and ensure efficient data access:
+
+1. **Dictionary in Python for Fast Access**  
+   A dictionary is used to store FAQ data, which provides **O(1) average time complexity** for lookups. This ensures fast access to FAQ data during translation and retrieval, reducing the need for repeated queries to the database.
+
+2. **Cache Memory for Faster Access**  
+   To further enhance performance, Redis is used for caching frequently accessed data, especially translations. The cache stores the translated FAQ fields (e.g., `question_hi`, `question_bn`, etc.), ensuring that they can be retrieved quickly without needing to call external translation APIs or database queries every time. This reduces latency and improves overall response time for the application.
+
