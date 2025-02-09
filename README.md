@@ -125,19 +125,5 @@ In this project, several optimizations have been implemented to improve performa
 2. **Cache Memory for Faster Access**  
    To further enhance performance, Redis is used for caching frequently accessed data, especially translations. The cache stores the translated FAQ fields (e.g., `question_hi`, `question_bn`, etc.), ensuring that they can be retrieved quickly without needing to call external translation APIs or database queries every time. This reduces latency and improves overall response time for the application.
    
-## Optimization
-
-**Sameer2319** and **Sameer Pal** are same accounts, 
-**Sameerpal2319** is **github student developer pack enabled account** and **sameer pal** is my **personal account**,
-
-## GitHub Account Clarification
-
-The commits for this project are made from the **Sameer2319** and **Sameer Pal** accounts. However, both **Sameer2319** and **Sameerpal2319** belong to the same person.
-
-- **Sameerpal2319** – This is the account where my code repository is hosted.  
-- **Sameer2319** – VS Code is configured with this account, so many commits are pushed from here.  
-
-## Both accounts belong to me, and I can verify ownership if needed.
-![image](https://github.com/user-attachments/assets/643860cf-8a74-436d-860a-d4726339e25f)
 
 Mail: sameerpal365@gmail.com 
